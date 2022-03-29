@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 300px) {
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .contact [type="text"], [type="email"], textarea {
+    width: 95%;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3%;
+  }
+  .footer {
+    background-color: darkblue;
+    color: white;
+    padding: 5%;
+    text-align: center;
+  }
+  .footer > span {
+    font-weight: bold;
+  }
+}
