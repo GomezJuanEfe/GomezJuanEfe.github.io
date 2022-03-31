@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="./CSS/style.css">
   <title>Portfolio</title>
 </head>
@@ -13,6 +16,34 @@
   </header>
 
   <main>
+    <section>
+
+      <!-- ACCORDION WRAPPER -->
+      <div class="accordion" id="projectWrapper">
+
+        <!-- FIRST PROJECT -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectone"
+              aria-expanded="true" aria-controls="collapseOne">
+              Personl Portfolio - HTML and CSS
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#projectWrapper">
+            <div class="accordion-body">
+              <p>
+                <strong>This was my first HTML and CSS project.</strong> It is shown by default, until the collapse plugin adds
+                the appropriate classes that we use to style each element. These classes control the overall appearance, as well
+                as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
     <!-- CONTACT FORM -->
       <section class="contact" id="contact">
@@ -44,5 +75,8 @@
   <footer id="footer" class="footer">
     &copy; Your <span>Site Name.</span> All Right Reserved. Designed by <span>GomezJuanEfe</span>
   </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
