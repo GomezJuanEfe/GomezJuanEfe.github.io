@@ -37,7 +37,40 @@
   }
 
   header {
-    position: relative;
+    position: static;
     top: 48px;
+    @include img-settings (100%, 40vw, center, cover);
+    background-image: url(../assets/img/header-background.jpg);
+    
+    .header-container {
+      height: 100%;
+      padding: 0 96px;
+      align-items: center;
+      justify-content: space-between;
+
+      .header-img {
+        width: 160px;
+        height: 160px;
+        position: static;
+      }
+
+      .header-heading {
+        padding: 0;
+        .header-title {
+          font-size: 5rem;
+          color: $backgroundColor;
+          text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
+          &::after {
+            content: " Gómez Ramírez";
+          }
+        }
+
+        .header-subtitle {
+          font-size: 4rem;
+          color: $headingColor-3;
+          text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* COLORS */
 * {
   padding: 0;
@@ -409,8 +410,41 @@ footer article p {
   }
 
   header {
-    position: relative;
+    position: static;
     top: 48px;
+    height: 40vw;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/img/header-background.jpg);
+  }
+  header .header-container {
+    height: 100%;
+    padding: 0 96px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header-container .header-img {
+    width: 160px;
+    height: 160px;
+    position: static;
+  }
+  header .header-container .header-heading {
+    padding: 0;
+  }
+  header .header-container .header-heading .header-title {
+    font-size: 5rem;
+    color: #ececec;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
+  }
+  header .header-container .header-heading .header-title::after {
+    content: " Gómez Ramírez";
+  }
+  header .header-container .header-heading .header-subtitle {
+    font-size: 4rem;
+    color: #a9d8d0;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
   }
 }
 
