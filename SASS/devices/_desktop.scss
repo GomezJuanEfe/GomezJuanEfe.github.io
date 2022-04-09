@@ -101,11 +101,25 @@
     }
 
     #contact {
-      // form {
-      //   display: flex;
-      //   flex-flow: row nowrap;
-
-      // }
+      form {
+        height: 250px;
+        display: flex;
+        flex-flow: column wrap;
+        input, textarea {
+          width: 48%;
+          margin-bottom: 24px;
+        }
+        textarea {
+          height: 125px;
+        }
+        input {
+          height: 50px;
+        }
+        [type="submit"] {
+          width: 48%;
+          margin: 0;
+        }
+      }
     }
   }
 }

@@ -462,6 +462,25 @@ footer article p {
   main #projects .project-container .project-card {
     width: 32%;
   }
+  main #contact form {
+    height: 250px;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  main #contact form input, main #contact form textarea {
+    width: 48%;
+    margin-bottom: 24px;
+  }
+  main #contact form textarea {
+    height: 125px;
+  }
+  main #contact form input {
+    height: 50px;
+  }
+  main #contact form [type=submit] {
+    width: 48%;
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
