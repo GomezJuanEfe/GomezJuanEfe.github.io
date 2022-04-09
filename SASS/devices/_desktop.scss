@@ -73,4 +73,39 @@
       }
     }
   }
+
+  main {
+
+    #about {
+      article {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        [class^="about-"] {
+          width: 48%;
+        }
+      }
+    }
+
+    #projects {
+
+      .project-container {
+        justify-content: space-between;
+
+        .project-card {
+          width: 32%;
+        }
+      }
+    }
+
+    #contact {
+      // form {
+      //   display: flex;
+      //   flex-flow: row nowrap;
+
+      // }
+    }
+  }
 }

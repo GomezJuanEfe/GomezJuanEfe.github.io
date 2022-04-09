@@ -446,6 +446,22 @@ footer article p {
     color: #a9d8d0;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
   }
+
+  main #about article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main #about article [class^=about-] {
+    width: 48%;
+  }
+  main #projects .project-container {
+    justify-content: space-between;
+  }
+  main #projects .project-container .project-card {
+    width: 32%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
