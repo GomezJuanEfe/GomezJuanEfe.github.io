@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../SASS/_variables.scss","../SASS/_normalize.scss","../SASS/devices/_movile.scss"],"names":[],"mappings":"AAAA;ACAA;EACE;EACA;EACA;;;AAEF;EACE;EACA;EACA,ODHU;;;AELZ;EACE;IACE,OFDa;IEEb;;;EAEF;IACE,OFJa;;;EEMf;IACE,OFNa;;;EEQf;IACE","file":"style.css"}

@@ -1,26 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+/* COLORS */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (min-width: 300px) {
-  body {
-    font-family: 'Montserrat', sans-serif;
+html {
+  font-size: 62.5%;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(12, 12, 12);
+}
+
+@media screen and (max-width: 699px) {
+  h1 {
+    color: rgb(2, 114, 114);
+    font-size: 1.8rem;
   }
-  .contact [type="text"], [type="email"], textarea {
-    width: 95%;
-    font-family: 'Montserrat', sans-serif;
-    padding: 3%;
+
+  h2 {
+    color: rgb(2, 140, 126);
   }
-  .footer {
-    background-color: darkblue;
-    color: white;
-    padding: 5%;
-    text-align: center;
+
+  h3 {
+    color: rgb(169, 216, 208);
   }
-  .footer > span {
-    font-weight: bold;
+
+  p {
+    font-size: 1.4rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
