@@ -1,0 +1,71 @@
+@media screen and (min-width: 700px) {
+  header {
+    padding: 48px 24px;
+
+    .header-container {
+      position: relative;
+      justify-content: flex-end;
+
+      .header-img {
+        display: inline-block;
+        position: absolute;
+        top: -22px;
+        left: calc(24px + 8vw);
+        @include profile-photo(120px, 120px); 
+      }
+
+      .header-heading {
+        padding-right: 10vw;
+      }
+
+      .header-title {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  main {
+    #photo-mobile-section {
+      display: none;
+    }
+
+    #projects {
+      .project-container {
+        // width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        gap: 12px;
+        .project-card {
+          width: 48%;
+
+        }
+      }
+    }
+
+    #education {
+      .institutes-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: 12px;
+
+        article {
+          width: 48%;
+        }
+      }
+    }
+
+    #contact {
+      form {
+        padding-bottom: 24px;
+
+        [type="submit"] {
+          width: 70%;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+  }
+}
