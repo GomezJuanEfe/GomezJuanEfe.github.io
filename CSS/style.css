@@ -8,24 +8,308 @@
 html {
   font-size: 62.5%;
   font-family: "Source Sans Pro", sans-serif;
-  color: rgb(12, 12, 12);
+  color: #0c0c0c;
 }
 
-h1 {
-  color: rgb(2, 114, 114);
-  font-size: 1.8rem;
+body {
+  background-color: #ececec;
+  color: #0c0c0c;
+}
+
+.border-line-header {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 32px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0) 10%, rgb(2, 114, 114) 50%, rgba(255, 255, 255, 0) 90%);
 }
 
 h2 {
-  color: rgb(2, 140, 126);
+  text-align: center;
+  font-size: 2.8rem;
+  color: #027272;
 }
 
 h3 {
-  color: rgb(169, 216, 208);
+  padding-bottom: 24px;
+  font-size: 1.8rem;
+  color: #028c7e;
 }
 
 p {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #0c0c0c;
+}
+
+nav {
+  display: none;
+}
+
+header {
+  padding: 32px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(3deg, rgba(255, 255, 255, 0) 20%, rgb(169, 216, 208) 45%);
+}
+header .header-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+header .header-container .header-img {
+  display: none;
+}
+header .header-container .header-subtitle {
+  position: relative;
+  bottom: 10px;
+}
+header h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  font-style: italic;
+}
+header h3 {
+  padding: 0;
+}
+
+main #photo-mobile-section {
+  padding: 32px 24px;
+}
+main #photo-mobile-section div {
+  width: 35vw;
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 35vw;
+  min-width: 35vw;
+  background-position: center;
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/profile-photo.jpg);
+  filter: grayscale(50%);
+  transform: scaleX(-1);
+  box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.75);
+}
+main #about {
+  padding: 32px 24px;
+}
+main #about p {
+  margin-bottom: 24px;
+  text-align: justify;
+}
+main #projects {
+  padding: 32px 24px;
+}
+main #projects > * {
+  padding-bottom: 32px;
+}
+main #projects article p {
+  text-align: justify;
+}
+main #projects .project-container > * {
+  padding-bottom: 32px;
+}
+main #projects .project-container .project-img-container {
+  margin-bottom: 12px;
+  position: relative;
+}
+main #projects .project-container .project-img-container [class^=pro-img-] {
+  height: 40vw;
+  min-width: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  position: relative;
+}
+main #projects .project-container .project-img-container .img-mask {
+  width: 100%;
+  height: 100%;
+  background-color: #a9d8d0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+main #projects .project-container .pro-img-1 {
+  background-image: url(../assets/img/project-async_JS.png);
+}
+main #projects .project-container .pro-img-2 {
+  background-image: url(../assets/img/project-JavaScript_basics.png);
+}
+main #projects .project-container .pro-img-3 {
+  background-image: url(../assets/img/project-Responsive.png);
+}
+main #projects .project-container p {
+  padding-bottom: 12px;
+}
+main #projects .project-container span {
+  width: 100%;
+  padding: 12px;
+  display: block;
+  background-color: #a9d8d0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+main #projects .project-container span a {
+  color: #028c7e;
+}
+main #skills {
+  padding: 32px 24px;
+}
+main #skills .skill-img {
+  height: 60px;
+  min-width: 60px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main #skills .skills-container {
+  padding-bottom: 32px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 12px;
+  text-align: center;
   font-size: 1.4rem;
+}
+main #skills .skill-card {
+  width: 100px;
+}
+main #skills .tech-1 {
+  background-image: url(../assets/icons/html5.svg);
+}
+main #skills .tech-2 {
+  background-image: url(../assets/icons/css3.svg);
+}
+main #skills .tech-3 {
+  background-image: url(../assets/icons/javascript.svg);
+}
+main #skills .tech-4 {
+  background-image: url(../assets/icons/reactjs.svg);
+}
+main #skills .tech-5 {
+  background-image: url(../assets/icons/sass.svg);
+}
+main #skills .tech-6 {
+  background-image: url(../assets/icons/git.svg);
+}
+main #skills .tech-7 {
+  background-image: url(../assets/icons/github_skll.svg);
+}
+main #skills .tech-8 {
+  background-image: url(../assets/icons/wordpress.svg);
+}
+main #skills .soft-1 {
+  background-image: url(../assets/icons/time-management.svg);
+}
+main #skills .soft-2 {
+  background-image: url(../assets/icons/self-management.svg);
+}
+main #skills .soft-3 {
+  background-image: url(../assets/icons/communication.svg);
+}
+main #skills .soft-4 {
+  background-image: url(../assets/icons/team-work.svg);
+}
+main #education {
+  padding: 32px 24px;
+}
+main #education .institutes-container {
+  text-align: justify;
+}
+main #education .institutes-container > * {
+  padding-bottom: 32px;
+}
+main #education .institutes-container .education-img {
+  height: 25vw;
+  min-width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main #education .institutes-container .platzi-logo {
+  background-image: url(../assets/img/platzi.png);
+}
+main #education .institutes-container .tamwood-logo {
+  background-image: url(../assets/img/tamwood.png);
+}
+main #contact {
+  padding: 32px 24px;
+}
+main #contact form > * {
+  width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 6px;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.6rem;
+}
+main #contact form textarea {
+  height: 100px;
+}
+main #contact form [type=submit] {
+  height: 48px;
+  background-color: #a9d8d0;
+  color: #028c7e;
+  font-weight: 700;
+}
+
+footer {
+  background-color: #028c7e;
+  padding: 32px 24px;
+}
+footer article {
+  padding-bottom: 24px;
+}
+footer article > * {
+  padding-bottom: 12px;
+}
+footer article h3 {
+  color: #ececec;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+}
+footer article .footer-logo-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer article .footer-logo-container .footer-icon {
+  height: 30px;
+  min-width: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer article .footer-logo-container .footer-icon a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+footer article .footer-logo-container .icon-github {
+  background-image: url("../assets/icons/github.svg");
+}
+footer article .footer-logo-container .icon-linkedin {
+  background-image: url("../assets/icons/linkedin.svg");
+}
+footer article .footer-logo-container .icon-gmail {
+  background-image: url("../assets/icons/gmail.svg");
+}
+footer article .footer-logo-container .icon-twitter {
+  background-image: url("../assets/icons/twitter.svg");
+}
+footer article p {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ececec;
 }
 
 /*# sourceMappingURL=style.css.map */

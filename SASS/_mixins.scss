@@ -1,14 +1,47 @@
-@mixin title-1 {
-  
+@mixin profile-photo ($width, $height) {
+  border-radius: 50%;
+  @include img-settings($width, $height, center, 170%);
+  background-image: url(../assets/img/profile-photo.jpg);
+  filter: grayscale(50%);
+  transform: scaleX(-1);
 }
-@mixin title-2 {
-  
-}
-@mixin subtitle {
-  
-}
-@mixin anchor {
 
+@mixin a-button {
+  width: 100%;
+  padding: 12px;
+  display: block;
+  background-color: $headingColor-3;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+@mixin padding-section (
+  $padding: 32px 24px,
+){
+  padding: $padding;
+}
+@mixin padding-elements-section {
+  padding-bottom: 32px;
+}
+@mixin italic-title {
+  color: $backgroundColor;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+}
+@mixin img-settings (
+  $width,
+  $height,
+  $background-position: center,
+  $background-size: contain,
+  $background-repeat: no-repeat,
+) {
+  height: $height;
+  min-width: $width;
+  background-position: $background-position;
+  background-size: $background-size;
+  background-repeat: $background-repeat;
 }
 @mixin nav-anchor {
   

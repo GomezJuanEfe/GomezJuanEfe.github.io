@@ -1,7 +1,8 @@
 /* COLORS */
-$headingColor-1: rgba(2, 114, 114, 1);
-$headingColor-2: rgba(2, 140, 126, 1);
-$headingColor-3: rgba(169, 216, 208, 1);
-$backgroundColor: rgba(242, 230, 220, 1);
-$fontColor: rgba(12, 12, 12, 1);
+$headingColor-1: #027272;
+$headingColor-2: #028c7e;
+$headingColor-3: #a9d8d0;
+$backgroundColor: #ececec;
+$fontColor: #0c0c0c;
 
+$headingGradient: linear-gradient(45deg, rgba(255, 255, 255, 0) 10%, rgba(2, 114, 114, 1) 50%, rgba(255, 255, 255, 0) 90%);
