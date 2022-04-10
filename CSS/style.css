@@ -489,5 +489,27 @@ footer article p {
     font-size: 2.8rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: initial;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
