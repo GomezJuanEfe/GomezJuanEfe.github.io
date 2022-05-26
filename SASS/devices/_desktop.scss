@@ -1,8 +1,9 @@
 @media screen and (min-width: 1000px) {
   nav {
-    width: 100%;
-    display: block;
     position: fixed;
+    width: 100%;
+    top: 0;
+    display: block;
     z-index: 30;
 
     ul {
@@ -77,6 +78,7 @@
   main {
 
     #about {
+      @include padding-section(60px 32px 24px);
       article {
         display: flex;
         flex-flow: row wrap;
@@ -90,6 +92,7 @@
     }
 
     #projects {
+      @include padding-section(60px 32px 24px);
 
       .project-container {
         justify-content: space-between;
@@ -100,7 +103,17 @@
       }
     }
 
+    #skills {
+      @include padding-section(60px 32px 24px);
+    }
+
+    #education {
+      @include padding-section(60px 32px 24px);
+    }
+
     #contact {
+      @include padding-section(60px 32px 24px);
+
       form {
         height: 250px;
         display: flex;

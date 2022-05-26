@@ -381,9 +381,10 @@ footer article p {
 }
 @media screen and (min-width: 1000px) {
   nav {
-    width: 100%;
-    display: block;
     position: fixed;
+    width: 100%;
+    top: 0;
+    display: block;
     z-index: 30;
   }
   nav ul {
@@ -450,6 +451,9 @@ footer article p {
     text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
   }
 
+  main #about {
+    padding: 60px 32px 24px;
+  }
   main #about article {
     display: flex;
     flex-flow: row wrap;
@@ -459,11 +463,23 @@ footer article p {
   main #about article [class^=about-] {
     width: 48%;
   }
+  main #projects {
+    padding: 60px 32px 24px;
+  }
   main #projects .project-container {
     justify-content: space-between;
   }
   main #projects .project-container .project-card {
     width: 32%;
+  }
+  main #skills {
+    padding: 60px 32px 24px;
+  }
+  main #education {
+    padding: 60px 32px 24px;
+  }
+  main #contact {
+    padding: 60px 32px 24px;
   }
   main #contact form {
     height: 250px;

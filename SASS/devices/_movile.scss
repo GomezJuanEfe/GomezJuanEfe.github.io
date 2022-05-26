@@ -52,7 +52,7 @@ main {
     }
   }
 
-  #projects {
+  #projects { 
     @include padding-section;
     & > * {
       @include padding-elements-section;
