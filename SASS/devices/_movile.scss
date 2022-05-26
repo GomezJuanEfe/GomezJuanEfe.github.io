@@ -8,7 +8,64 @@ header {
   top: 0;
   z-index: 20;
   background: linear-gradient(3deg,rgba(255, 255, 255, 0) 20%,rgb(169, 216, 208) 45%);
-
+  
+  // Hamburger menu
+  /* The sidepanel menu */
+    .sidepanel {
+      height: 100%;
+      /* Specify a height */
+      width: 0;
+      /* 0 width - change this with JavaScript */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      background-color: rgba($color: $headingColor-2, $alpha: 0.9);
+      /* Black*/
+      overflow-x: hidden;
+      /* Disable horizontal scroll */
+      padding: 60px 0px 60px;
+      /* Place content 60px from the top */
+      transition: 0.5s;
+      /* 0.5 second transition effect to slide in the sidepanel */
+    }
+  
+    /* The sidepanel links */
+    .sidepanel a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 25px;
+      color: $backgroundColor;
+      display: block;
+      transition: 0.3s;
+    }
+  
+    /* Position and style the close button (top right corner) */
+    .sidepanel .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  
+    /* Style the button that is used to open the sidepanel */
+    .openbtn {
+      padding-bottom: 20px;
+      font-size: 32px;
+      font-weight: bolder;
+      background-color: transparent;
+      cursor: pointer;
+      color: $headingColor-1;
+      border: none;
+    }
+  // Hamburger menu
+  
   .header-container {
     display: flex;
     justify-content: space-around;

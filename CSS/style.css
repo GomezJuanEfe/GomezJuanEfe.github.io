@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #ececec;
+  background-color: rgb(236, 236, 236);
   color: #0c0c0c;
 }
 
@@ -56,6 +56,57 @@ header {
   top: 0;
   z-index: 20;
   background: linear-gradient(3deg, rgba(255, 255, 255, 0) 20%, rgb(169, 216, 208) 45%);
+  /* The sidepanel menu */
+  /* The sidepanel links */
+  /* Position and style the close button (top right corner) */
+  /* Style the button that is used to open the sidepanel */
+}
+header .sidepanel {
+  height: 100%;
+  /* Specify a height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  background-color: rgba(2, 140, 126, 0.9);
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding: 60px 0px 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidepanel */
+}
+header .sidepanel a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(236, 236, 236);
+  display: block;
+  transition: 0.3s;
+}
+header .sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+header .openbtn {
+  padding-bottom: 20px;
+  font-size: 32px;
+  font-weight: bolder;
+  background-color: transparent;
+  cursor: pointer;
+  color: #027272;
+  border: none;
 }
 header .header-container {
   display: flex;
@@ -277,7 +328,7 @@ footer article > * {
   padding-bottom: 12px;
 }
 footer article h3 {
-  color: #ececec;
+  color: rgb(236, 236, 236);
   text-align: center;
   font-size: 1.8rem;
   font-weight: 400;
@@ -315,12 +366,16 @@ footer article p {
   text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
-  color: #ececec;
+  color: rgb(236, 236, 236);
 }
 
 @media screen and (min-width: 700px) {
   header {
-    padding: 48px 24px;
+    padding: 12px 24px;
+    background: linear-gradient(3deg, rgb(236, 236, 236) 30%, rgb(169, 216, 208) 58%);
+  }
+  header .openbtn {
+    display: none;
   }
   header .header-container {
     position: relative;
@@ -329,11 +384,11 @@ footer article p {
   header .header-container .header-img {
     display: inline-block;
     position: absolute;
-    top: -22px;
+    top: 0px;
     left: calc(24px + 8vw);
     border-radius: 50%;
-    height: 120px;
-    min-width: 120px;
+    height: 80px;
+    min-width: 80px;
     background-position: center;
     background-size: 170%;
     background-repeat: no-repeat;
@@ -352,6 +407,9 @@ footer article p {
   main #photo-mobile-section {
     display: none;
   }
+  main #projects {
+    padding: 100px 24px 0px;
+  }
   main #projects .project-container {
     display: flex;
     justify-content: space-around;
@@ -361,6 +419,12 @@ footer article p {
   main #projects .project-container .project-card {
     width: 48%;
   }
+  main #skills {
+    padding: 100px 24px 0px;
+  }
+  main #education {
+    padding: 100px 24px 0px;
+  }
   main #education .institutes-container {
     display: flex;
     flex-flow: row wrap;
@@ -369,6 +433,9 @@ footer article p {
   }
   main #education .institutes-container article {
     width: 48%;
+  }
+  main #contact {
+    padding: 100px 24px 0px;
   }
   main #contact form {
     padding-bottom: 24px;
@@ -400,7 +467,7 @@ footer article p {
     transition: background-color 0.5s ease-in-out;
   }
   nav ul li:hover {
-    background-color: #ececec;
+    background-color: rgb(236, 236, 236);
     transition: background-color 0.5s ease-in-out;
   }
   nav ul li a {
@@ -423,6 +490,9 @@ footer article p {
     background-repeat: no-repeat;
     background-image: url(../assets/img/header-background.jpg);
   }
+  header #mySidepanel {
+    display: none;
+  }
   header .header-container {
     height: 100%;
     padding: 0 96px;
@@ -439,7 +509,7 @@ footer article p {
   }
   header .header-container .header-heading .header-title {
     font-size: 5rem;
-    color: #ececec;
+    color: rgb(236, 236, 236);
     text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
   }
   header .header-container .header-heading .header-title::after {

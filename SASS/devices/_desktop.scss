@@ -42,6 +42,10 @@
     top: 48px;
     @include img-settings (100%, 40vw, center, cover);
     background-image: url(../assets/img/header-background.jpg);
+
+    #mySidepanel {
+      display: none;
+    }
     
     .header-container {
       height: 100%;

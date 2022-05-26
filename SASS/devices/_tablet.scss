@@ -1,6 +1,11 @@
 @media screen and (min-width: 700px) {
   header {
-    padding: 48px 24px;
+    padding: 12px 24px;
+    background: linear-gradient(3deg, rgb(236, 236,236) 30%, rgb(169, 216, 208) 58%);
+
+    .openbtn {
+      display: none;
+    }
 
     .header-container {
       position: relative;
@@ -9,9 +14,9 @@
       .header-img {
         display: inline-block;
         position: absolute;
-        top: -22px;
+        top: 0px;
         left: calc(24px + 8vw);
-        @include profile-photo(120px, 120px); 
+        @include profile-photo(80px, 80px); 
       }
 
       .header-heading {
@@ -30,6 +35,8 @@
     }
 
     #projects {
+      @include padding-section (100px 24px 0px);
+
       .project-container {
         // width: 100%;
         display: flex;
@@ -43,7 +50,13 @@
       }
     }
 
+    #skills {
+      @include padding-section (100px 24px 0px);
+    }
+
     #education {
+      @include padding-section (100px 24px 0px);
+
       .institutes-container {
         display: flex;
         flex-flow: row wrap;
@@ -57,6 +70,8 @@
     }
 
     #contact {
+      @include padding-section (100px 24px 0px);
+
       form {
         padding-bottom: 24px;
 

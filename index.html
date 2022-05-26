@@ -22,10 +22,20 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+
   <!-- HEADER -->
   <header>
     <div class="header-container">
-      <aside class="header-img"></aside>
+      <div id="mySidepanel" class="sidepanel" onclick="closeNav()">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+      <aside class="header-img" onclick="openNav()"></aside>
       <div class="header-heading">
         <a href="#">
           <h1 class="header-title">Juan Felipe</h1>
@@ -267,5 +277,15 @@
       <p>Handcrafted by me &copy; TwentyTwenty-two</p>
     </article>
   </footer>
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "100%";
+    }
+
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+  </script>
 </body>
 </html>
