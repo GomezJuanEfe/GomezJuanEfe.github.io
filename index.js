@@ -27,14 +27,14 @@ const submitForm = () => {
   })
     .then(response => response.json())
     .then(data => {
-      alert('Tu mensaje se ha recibido satisfactoriamente');
+      alert('Your message has been received :) Thanks!');
       inp.name.value = '';
       inp.email.value = '';
       inp.subject.value = '';
       textInp.value = '';
     })
     .catch(error => {
-      alert('Algo salió mal, inténtalo más tarde.');
+      alert('Something went wrong :( ...Try later!');
     });
 }
 
