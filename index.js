@@ -43,4 +43,3 @@ submitBtn.addEventListener('click', (evt) => {
   evt.preventDefault();
   submitForm();
 })
-
