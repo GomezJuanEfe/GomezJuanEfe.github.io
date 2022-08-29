@@ -188,6 +188,9 @@ main #projects .project-container .project-img-container .img-mask {
   top: 0;
   z-index: 10;
 }
+main #projects .project-container .pro-img-react {
+  background-image: url(../assets/img/Project-TodoMachine.jpeg);
+}
 main #projects .project-container .pro-img-1 {
   background-image: url(../assets/img/project-async_JS.png);
 }
