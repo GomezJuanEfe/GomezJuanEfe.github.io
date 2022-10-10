@@ -188,6 +188,18 @@ main #projects .project-container .project-img-container .img-mask {
   top: 0;
   z-index: 10;
 }
+main #projects .project-container .pro-img-wedding {
+  background-image: url(../assets/img/project-wedding.png);
+}
+main #projects .project-container .pro-img-spaces {
+  background-image: url(../assets/img/project-spaces.png);
+}
+main #projects .project-container .pro-img-sudoku {
+  background-image: url(../assets/img/project-sudoku.png);
+}
+main #projects .project-container .pro-img-angular {
+  background-image: url(../assets/img/project-origami-caffe.png);
+}
 main #projects .project-container .pro-img-react {
   background-image: url(../assets/img/Project-TodoMachine.jpeg);
 }
