@@ -1,7 +1,7 @@
 @media screen and (min-width: 700px) {
   header {
     padding: 12px 24px;
-    background: linear-gradient(3deg, rgb(236, 236,236) 30%, rgb(169, 216, 208) 58%);
+    background: linear-gradient(3deg, rgb(236, 236, 236) 30%, rgb(169, 216, 208) 58%);
 
     .openbtn {
       display: none;
@@ -16,7 +16,7 @@
         position: absolute;
         top: 0px;
         left: calc(24px + 8vw);
-        @include profile-photo(80px, 80px); 
+        @include profile-photo(80px, 80px);
       }
 
       .header-heading {
@@ -27,6 +27,12 @@
         font-size: 4rem;
       }
     }
+  }
+
+  .header-technologies.tablet {
+    @include padding-section (50px 48px 50px);
+    display: flex;
+    gap: 70px;
   }
 
   main {
@@ -43,6 +49,7 @@
         justify-content: space-around;
         flex-flow: row wrap;
         gap: 12px;
+
         .project-card {
           width: 48%;
 

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* COLORS */
 * {
   padding: 0;
@@ -42,6 +41,8 @@ p {
 }
 
 a {
+  font-size: 1.4rem;
+  font-weight: bold;
   text-decoration: none;
   color: #0c0c0c;
 }
@@ -127,10 +128,29 @@ header .header-container .header-title {
   font-style: italic;
 }
 
+.header-technologies {
+  margin-top: 24px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+.header-technologies img {
+  max-width: 50px;
+  flex: auto;
+}
+
+.header-technologies {
+  display: none;
+}
+
+.header-technologies.mobile {
+  display: flex;
+}
+
 main #photo-mobile-section {
   padding: 32px 24px;
 }
-main #photo-mobile-section div {
+main #photo-mobile-section div:nth-child(1) {
   width: 35vw;
   margin: 0 auto;
   border-radius: 50%;
@@ -149,7 +169,6 @@ main #about {
 }
 main #about p {
   margin-bottom: 24px;
-  text-align: justify;
 }
 main #projects {
   padding: 32px 24px;
@@ -159,9 +178,6 @@ main #projects > * {
 }
 main #projects article h3 {
   text-align: center;
-}
-main #projects article p {
-  text-align: justify;
 }
 main #projects .project-container > * {
   padding-bottom: 32px;
@@ -378,7 +394,6 @@ footer article .footer-logo-container .icon-twitter {
   background-image: url("../assets/icons/twitter.svg");
 }
 footer article p {
-  text-align: center;
   font-size: 1.4rem;
   font-weight: 400;
   color: rgb(236, 236, 236);
@@ -417,6 +432,12 @@ footer article p {
   }
   header .header-container .header-title {
     font-size: 4rem;
+  }
+
+  .header-technologies.tablet {
+    padding: 50px 48px 50px;
+    display: flex;
+    gap: 70px;
   }
 
   main #photo-mobile-section {
@@ -468,6 +489,7 @@ footer article p {
     top: 0;
     display: block;
     z-index: 30;
+    background-color: #a9d8d0;
   }
   nav ul {
     display: flex;
@@ -495,6 +517,19 @@ footer article p {
     color: #027272;
   }
 
+  .header-technologies.tablet {
+    display: none;
+  }
+
+  .header-technologies {
+    display: flex;
+  }
+  .header-technologies img {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
   header {
     position: static;
     top: 48px;
@@ -520,6 +555,7 @@ footer article p {
     position: static;
   }
   header .header-container .header-heading {
+    min-width: 470px;
     padding: 0;
   }
   header .header-container .header-heading .header-title {
@@ -528,7 +564,7 @@ footer article p {
     text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
   }
   header .header-container .header-heading .header-title::after {
-    content: " Gómez Ramírez";
+    content: " Gomez";
   }
   header .header-container .header-heading .header-subtitle {
     font-size: 4rem;
@@ -571,7 +607,8 @@ footer article p {
     display: flex;
     flex-flow: column wrap;
   }
-  main #contact form input, main #contact form textarea {
+  main #contact form input,
+main #contact form textarea {
     width: 48%;
     margin-bottom: 24px;
   }
@@ -611,6 +648,122 @@ footer article p {
     max-width: 1200px;
     margin: 0 auto;
   }
+}
+div.projects-section {
+  /* basic article elements styling */
+  /* using the has() relational pseudo selector to update our custom properties */
+}
+div.projects-section article {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+div.projects-section article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+div.projects-section article h2 {
+  margin: 0 0 18px 0;
+  font-size: 1.9rem;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+div.projects-section figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+div.projects-section article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+div.projects-section .article-body {
+  padding: 24px;
+}
+div.projects-section article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+div.projects-section article a:focus {
+  outline: 1px dotted #28666e;
+}
+div.projects-section article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+div.projects-section article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+.projects-section {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+@media screen and (max-width: 960px) {
+  div.projects-section article {
+    container: card/inline-size;
+  }
+}
+@container card (min-width: 380px) {
+  div.projects-section .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  div.projects-section .article-body {
+    padding-left: 0;
+  }
+  div.projects-section figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  div.projects-section figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
