@@ -1,3 +1,20 @@
+import { cardTemplate } from './js/projectCard.js'
+
+(async function () {
+  const response = await fetch('./data.json')
+  const data = await response.json()
+
+  data.projects.map(project => {
+    cardTemplate({
+      title: project.title,
+      image: project.image,
+      description: project.description,
+      links: project.links
+    })
+  })
+})()
+
+/* Navigation bar */
 function openNav() {
   document.getElementById("mySidepanel").style.width = "100%";
 }
@@ -6,6 +23,15 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
+
+const navBarBtn = document.getElementById('nav-bar-btn')
+navBarBtn.addEventListener('click', openNav)
+
+const navBarOverlay = document.getElementById('nav-bar-overlay')
+navBarOverlay.addEventListener('click', closeNav)
+
+const sideBarPanel = document.getElementById('mySidepanel')
+sideBarPanel.addEventListener('click', closeNav)
 
 /* CONTACT FORM */
 let inp = document.getElementsByTagName('input');

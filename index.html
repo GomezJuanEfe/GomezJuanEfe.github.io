@@ -29,7 +29,7 @@
   <header>
     <div class="header-container">
       <!-- Mobile navigation bar -->
-      <div id="mySidepanel" class="sidepanel" onclick="closeNav()">
+      <div id="mySidepanel" class="sidepanel">
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -37,8 +37,8 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
-      <button class="openbtn" onclick="openNav()">&#9776;</button>
-      <aside class="header-img" onclick="openNav()"></aside>
+      <button id="nav-bar-btn" class="openbtn">&#9776;</button>
+      <aside id="nav-bar-overlay" class="header-img"></aside>
       <div class="header-content">
         <div class="header-heading">
           <a href="#">
@@ -125,139 +125,6 @@
     <!-- /ABOUT SECTION -->
 
     <!-- PROJECT SECTION -->
-    <!-- <section id="projects">
-      <article>
-        <h2>
-          Projects
-        </h2>
-        <div class="border-line-header"></div>
-      </article>
-      <div class="project-container">
-        <article class="project-card">
-          <h3>
-            www.okiyluza.com
-          </h3>
-          <div class="project-img-container">
-            <div class="pro-img-wedding"></div>
-            <div class="img-mask"></div>
-          </div>
-          <p>
-            Developed a site for a wedding from the design, DNS and hosting to the coding and deployment. The site allows users to see all the information about the wedding and select the preferred dish for the event.
-          </p>
-          <span>
-            <a href="https://okiyluza.com/" target="_blank" >Link</a>
-          </span>
-        </article>
-        <article class="project-card">
-          <h3>
-            Spaces
-          </h3>
-          <div class="project-img-container">
-            <div class="pro-img-spaces"></div>
-            <div class="img-mask"></div>
-          </div>
-          <p>
-            A PHP dashboard based on a workspace renting business. This application has 3 different types of roles: super-admin, admin and client. Each user has different functions such as creating new users, booking a space, seeing reports according to the role, among others. 
-          </p>
-          <span>
-            <a href="https://github.com/GomezJuanEfe/FinalProject_phpCourse" target="_blank" >Repository</a>
-          </span>
-        </article>
-        <article class="project-card">
-          <h3>
-            Sudoku
-          </h3>
-          <div class="project-img-container">
-            <div class="pro-img-sudoku"></div>
-            <div class="img-mask"></div>
-          </div>
-          <p>
-            An interactive web Sudoku puzzle game developed in HTML, CSS, and JavaScript.
-          </p>
-          <span>
-            <a href="https://gomezjuanefe.github.io/sudokuProject/" target="_blank" >Deploy</a>
-          </span>
-          <span>
-            <a href="https://github.com/GomezJuanEfe/sudokuProject" target="_blank" >Repository</a>
-          </span>
-        </article>
-        <article class="project-card">
-          <h3>
-            Origami Cafe
-          </h3>
-          <div class="project-img-container">
-            <div class="pro-img-angular"></div>
-            <div class="img-mask"></div>
-          </div>
-          <p>
-            A e-commerce site based on a cafe shop that users can add products to the cart and pay the total amount later. This site was made using Angula JS.
-          </p>
-          <span>
-            <a href="https://alycehwy.github.io/Origami-Project/#!/" target="_blank" >Deploy</a>
-          </span>
-          <span>
-            <a href="https://github.com/alycehwy/Origami-Project" target="_blank" >Repository</a>
-          </span>
-        </article>
-        <article class="project-card">
-          <h3>
-            TO-DO Machine
-          </h3>
-          <div class="project-img-container">
-            <div class="pro-img-react"></div>
-            <div class="img-mask"></div>
-          </div>
-          <p>
-            A productivity app where users can create task and mark it as completed. This application was made applying different React concepts and functions such as Components, useState, useContext, useEffect, Custom Hooks and Portals.
-          </p>
-          <span>
-            <a href="https://gomezjuanefe.github.io/ToDoMachine/" target="_blank" >Deploy</a>
-          </span>
-          <span>
-            <a href="https://github.com/GomezJuanEfe/ToDoMachine" target="_blank" >Repository</a>
-          </span>
-        </article>
-        <article class="project-card">
-          <h3>
-            JavaScript Fundamentals
-          </h3>
-          <div class="project-img-container">
-            <div class="pro-img-2"></div>
-            <div class="img-mask"></div>
-          </div>
-          <p>
-            This project has different modules which help the user to solve some math problems such as median, average, perimeter and area; applying the fundamentals of the JavaScript language.
-          </p>
-          <span>
-            <a href="https://gomezjuanefe.github.io/curso-practico-javascript/index.html" target="_blank" >Deploy</a>
-          </span>
-          <span>
-            <a href="https://github.com/GomezJuanEfe/curso-practico-javascript" target="_blank" >Repository</a>
-          </span>
-        </article>
-        <article class="project-card">
-          <h3>
-            Responsive Web Design
-          </h3>
-          <div class="project-img-container">
-            <div class="pro-img-3"></div>
-            <div class="img-mask"></div>
-          </div>
-          <p>
-            This site was made to apply different concepts of CSS such as Flexbox to create a fully responsive site. It took as a reference the style guide of a Figma project.
-           </p>
-          <span>
-            <a href="https://gomezjuanefe.github.io/videoStreaming/index.html" target="_blank" >Deploy</a>
-          </span>
-          <span>
-            <a href="https://github.com/GomezJuanEfe/videoStreaming" target="_blank" >Repository</a>
-          </span>
-        </article>
-      </div>
-    </section> -->
-    <!-- /PROJECT SECTION -->
-
-    <!-- PROJECT SECTION 2 -->
     <section id="projects">
       <section>
         <h2>
@@ -265,155 +132,11 @@
         </h2>
         <div class="border-line-header"></div>
       </section>
-      <div class="projects-section">
-
-        <article>
-          <div class="article-wrapper">
-            <figure>
-              <img src="https://picsum.photos/id/1011/800/450" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>This is some title</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-
-          <div class="article-wrapper">
-            <figure>
-              <img src="https://picsum.photos/id/1005/800/450" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>This is some title</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-
-          <div class="article-wrapper">
-            <figure>
-              <img src="https://picsum.photos/id/103/800/450" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>This is some title</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div class="article-wrapper">
-            <figure>
-              <img src="https://picsum.photos/id/103/800/450" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>This is some title</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-    </section>
-    <!-- /PROJECT SECTION 2 -->
-
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="border-line-header"></div>
-      <h3>Technical Skills</h3>
-      <div class="skills-container">
-        <div class="skill-card">
-          <aside class="skill-img tech-1"></aside>
-          <h4>HTML 5</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img tech-2"></aside>
-          <h4>CSS 3</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img tech-3"></aside>
-          <h4>JavaScript</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img tech-4"></aside>
-          <h4>React JS</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img tech-5"></aside>
-          <h4>SASS</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img tech-6"></aside>
-          <h4>Git</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img tech-7"></aside>
-          <h4>GitHub</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img tech-8"></aside>
-          <h4>WordPress</h4>
-        </div>
-      </div>
-      <h3>Soft Skils</h3>
-      <div class="skills-container">
-        <div class="skill-card">
-          <aside class="skill-img soft-1"></aside>
-          <h4>Time Management</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img soft-2"></aside>
-          <h4>Self-management</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img soft-3"></aside>
-          <h4>Clear Communication</h4>
-        </div>
-        <div class="skill-card">
-          <aside class="skill-img soft-4"></aside>
-          <h4>Teamwork</h4>
-        </div>
+      <div class="projects-section" id="project-card-cont">
+        <!-- card template -->
       </div>
     </section>
-    <!-- /SKILLS SECTION -->
+    <!-- /PROJECT SECTION -->
 
     <!-- EDUCATION SECTION -->
     <section id="education">
@@ -433,8 +156,7 @@
         <article>
           <aside class="education-img tamwood-logo"></aside>
           <p>
-            At this moment, I’m studying a web development coop program at Tamwood Careers college which is located in Vancouver. Here, I’ve met other mates and incredible people who have the same interest as me and I’m building great
-            industry-oriented projects with some of them.
+            Web development program focused on developing both front-end and back-end skills with a strong emphasis on HTML, CSS, SASS, Bootstrap, JavaScript, Query, PHP, MySQL, NodeJS, ReactJS, VueJS, Angular and WordPress.
           </p>
         </article>
       </div>
@@ -481,11 +203,35 @@
       </div>
     </article>
     <article>
-      <p>Handcrafted by me &copy; TwentyTwenty-two</p>
+      <p class="center">Handcrafted by me &copy; TwentyTwenty-three</p>
     </article>
   </footer>
   <!-- /FOOTER -->
 
-  <script src="./index.js"></script>
+  <!-- CARD TEMPLATE -->
+ 
+  <template id="card-template">
+    <article>
+      <div class="article-wrapper">
+        <figure class="a-relative">
+          <img src="https://picsum.photos/id/1011/800/450" loading="lazy" alt="Project animated image" />
+          <a class="image-anchor" target="_blank" href="https://picsum.photos/id/1011/800/450"></a>
+        </figure>
+        <div class="article-body">
+          <h2>Project title</h2>
+          <p>
+            Project Description
+          </p>
+          <div class="cta-buttons">
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <!-- /CARD TEMPLATE -->
+
+
+  <script type="module" src="./index.js"></script>
 </body>
 </html>

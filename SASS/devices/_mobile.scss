@@ -292,7 +292,6 @@ main {
     @include padding-section;
 
     .institutes-container {
-      text-align: justify;
 
       &>* {
         @include padding-elements-section;
