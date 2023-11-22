@@ -1,0 +1,186 @@
+div.projects-section {
+
+  article {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+  }
+
+  a.image-anchor::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+
+  .a-relative {
+    position: relative;
+  }
+
+  /* basic article elements styling */
+  article h2 {
+    margin: 0 0 18px 0;
+    font-size: 1.9rem;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    // aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .article-body {
+    padding: 24px;
+  }
+
+  /* using the has() relational pseudo selector to update our custom properties */
+  article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: $headingColor-1;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+}
+
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+.projects-section {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+}
+
+@media screen and (max-width: 960px) {
+  div.projects-section {
+
+    article {
+      container: card/inline-size;
+    }
+  }
+}
+
+@container card (min-width: 380px) {
+  div.projects-section {
+
+    .article-wrapper {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+    }
+
+    .article-body {
+      padding-left: 0;
+    }
+
+    figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    figure img {
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+}
+
+.article-wrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+}
+
+.article-wrapper .article-body {
+  flex: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.article-body>* {
+  flex: auto;
+}
+
+/* a  Button */
+
+.cta-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.cta-buttons>a {
+  flex: 1;
+  align-self: flex-end;
+}
+
+.cta-buttons>a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card-button {
+  align-items: center;
+  background-color: $headingColor-2;
+  border: 1.5px solid $headingColor-2;
+  box-sizing: border-box;
+  color: $backgroundColor;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.09rem;
+  height: 34px;
+  justify-content: center;
+  line-height: 24px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.card-button:focus {
+  color: white;
+}
+
+.card-button:hover {
+  border-color: $headingColor-2;
+  color: $headingColor-2;
+  background-color: white;
+}
+
+.card-button:active {
+  border-color: $headingColor-1;
+  color: $headingColor-1;
+  fill: $headingColor-1;
+}
+
+/* /a  Button */

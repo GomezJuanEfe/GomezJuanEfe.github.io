@@ -1,0 +1,71 @@
+{
+  "projects": [
+    {
+      "title": "Go Cab Now - Frontend",
+      "image": "https://cms.gomezjuanefe.com/wp-content/uploads/2023/11/go-cab-now-1.gif",
+      "description": "A fully responsive web application to book your cab trips.<br><br>Built with <strong>React, SASS, JWT, React Router DOM</strong>.<br><br>Implemented some features of the UI library <strong>Mantine</strong>.<br><br>Deployed on <strong>Vercel</strong>.",
+      "links": [
+        {
+          "text": "Demo",
+          "url": "https://go-cab-now.vercel.app/"
+        },
+        {
+          "text": "Code",
+          "url": "https://github.com/GomezJuanEfe/go-cab-now"
+        }
+      ]
+    },
+    {
+      "title": "Go Cab Now - Backend",
+      "image": "https://cms.gomezjuanefe.com/wp-content/uploads/2023/11/Go-cab-now-backend.gif",
+      "description": "REST API architecture backend for Go Cab Now application.<br><br>Built with <strong>Express JS, Node JS, JWT, TypeScript, Prisma</strong> as an ORM and <strong>PostgreSQL</strong>. <br><br>Integrated with different services such as <strong>SendGrid</strong>, <strong>Cloudinary</strong> and <strong>Stripe</strong>.<br><br>Backend deployed on <strong>Render</strong> and DB deployed on <strong>FL0</strong>.",
+      "links": [
+        {
+          "text": "Demo",
+          "url": "https://go-cab-now-backend.onrender.com/"
+        },
+        {
+          "text": "Code",
+          "url": "https://github.com/GomezJuanEfe/go-cab-now-backend"
+        }
+      ]
+    },
+    {
+      "title": "Step-Away / Landing Page",
+      "image": "https://cms.gomezjuanefe.com/wp-content/uploads/2023/11/step-away.gif",
+      "description": "Landing web page designed, coded and deployed for a client.<br><br>Built with <strong>WordPress, Elementor, WordPress custom theme, CSS and React</strong>.<br><br>The site was integrated with a third-party application to process the form.<br><br>Understand client requirements and translate them into custom web solutions.",
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://step-away.com/uag-summer-programme/"
+        }
+      ]
+    },
+    {
+      "title": "Alpaca",
+      "image": "https://cms.gomezjuanefe.com/wp-content/uploads/2023/11/alpaca.gif",
+      "description": "Web page designed, coded and deployed for a client.<br><br>Built with <strong>WordPress, Elementor, CSS and JavaScript</strong>.<br><br>Understand client requirements and translate them into custom web solutions.",
+      "links": [
+        {
+          "text": "Demo",
+          "url": "https://alpaca.gomezjuanefe.com/"
+        }
+      ]
+    },
+    {
+      "title": "Calc UI",
+      "image": "https://cms.gomezjuanefe.com/wp-content/uploads/2023/11/calc-UI.gif",
+      "description": "The fanciest calculator on the web.<br><br>Built with <strong>React</strong> and <strong>TypeScript</strong> and someone else's interesting pieces of code from the web.<br><br>The amazing UI was made with simple <strong>CSS</strong> precompiled with <strong>SASS</strong> and using someone else's interesting pieces of code from the web.<br>",
+      "links": [
+        {
+          "text": "Demo",
+          "url": "https://gomezjuanefe.github.io/calc-ui/"
+        },
+        {
+          "text": "Code",
+          "url": "https://github.com/GomezJuanEfe/calc-ui"
+        }
+      ]
+    }
+  ]
+}

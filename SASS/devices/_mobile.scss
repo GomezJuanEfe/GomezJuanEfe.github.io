@@ -7,65 +7,66 @@ header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: linear-gradient(3deg,rgba(255, 255, 255, 0) 20%,rgb(169, 216, 208) 45%);
-  
+  background: linear-gradient(3deg, rgba(255, 255, 255, 0) 20%, rgb(169, 216, 208) 45%);
+
   // Hamburger menu
   /* The sidepanel menu */
-    .sidepanel {
-      height: 100%;
-      /* Specify a height */
-      width: 0;
-      /* 0 width - change this with JavaScript */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      /* Stay on top */
-      top: 0;
-      left: 0;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-around;
-      background-color: rgba($color: $headingColor-2, $alpha: 0.9);
-      /* Black*/
-      overflow-x: hidden;
-      /* Disable horizontal scroll */
-      padding: 60px 0px 60px;
-      /* Place content 60px from the top */
-      transition: 0.5s;
-      /* 0.5 second transition effect to slide in the sidepanel */
-    }
-  
-    /* The sidepanel links */
-    .sidepanel a {
-      padding: 8px;
-      text-decoration: none;
-      font-size: 25px;
-      color: $backgroundColor;
-      display: block;
-      transition: 0.3s;
-    }
-  
-    /* Position and style the close button (top right corner) */
-    .sidepanel .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-  
-    /* Style the button that is used to open the sidepanel */
-    .openbtn {
-      padding-bottom: 20px;
-      font-size: 32px;
-      font-weight: bolder;
-      background-color: transparent;
-      cursor: pointer;
-      color: $headingColor-1;
-      border: none;
-    }
+  .sidepanel {
+    height: 100%;
+    /* Specify a height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    background-color: rgba($color: $headingColor-2, $alpha: 0.9);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding: 60px 0px 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidepanel */
+  }
+
+  /* The sidepanel links */
+  .sidepanel a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $backgroundColor;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: bolder;
+    background-color: transparent;
+    cursor: pointer;
+    color: $headingColor-1;
+    border: none;
+  }
+
   // Hamburger menu
-  
+
   .header-container {
     display: flex;
     justify-content: space-around;
@@ -89,11 +90,31 @@ header {
   }
 }
 
+.header-technologies {
+  margin-top: 24px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 32px;
+
+  & img {
+    max-width: 50px;
+    flex: auto;
+  }
+}
+
+.header-technologies {
+  display: none
+}
+
+.header-technologies.mobile {
+  display: flex
+}
+
 main {
   #photo-mobile-section {
     @include padding-section;
 
-    div {
+    & div:nth-child(1) {
       width: 35vw;
       margin: 0 auto;
       @include profile-photo(35vw, 35vw);
@@ -105,13 +126,13 @@ main {
 
     p {
       margin-bottom: 24px;
-      text-align: justify;
     }
   }
 
-  #projects { 
+  #projects {
     @include padding-section;
-    & > * {
+
+    &>* {
       @include padding-elements-section;
     }
 
@@ -119,13 +140,10 @@ main {
       h3 {
         text-align: center;
       }
-      p {
-        text-align: justify;
-      }
     }
 
     .project-container {
-      & > * {
+      &>* {
         @include padding-elements-section;
       }
 
@@ -145,31 +163,39 @@ main {
           background-color: $headingColor-3;
           opacity: 0.5;
           position: absolute;
-          top:0;
+          top: 0;
           z-index: 10;
         }
       }
+
       .pro-img-wedding {
         background-image: url(../assets/img/project-wedding.png);
       }
+
       .pro-img-spaces {
         background-image: url(../assets/img/project-spaces.png);
       }
+
       .pro-img-sudoku {
         background-image: url(../assets/img/project-sudoku.png);
       }
+
       .pro-img-angular {
         background-image: url(../assets/img/project-origami-caffe.png);
       }
-      .pro-img-react{
+
+      .pro-img-react {
         background-image: url(../assets/img/Project-TodoMachine.jpeg);
       }
+
       .pro-img-1 {
         background-image: url(../assets/img/project-async_JS.png);
       }
+
       .pro-img-2 {
         background-image: url(../assets/img/project-JavaScript_basics.png);
       }
+
       .pro-img-3 {
         background-image: url(../assets/img/project-Responsive.png);
       }
@@ -177,6 +203,7 @@ main {
       p {
         padding-bottom: 12px
       }
+
       span {
         @include a-button;
         margin-bottom: 6px;
@@ -190,7 +217,7 @@ main {
       }
     }
   }
-  
+
   #skills {
     @include padding-section;
 
@@ -215,36 +242,47 @@ main {
     .tech-1 {
       background-image: url(../assets/icons/html5.svg);
     }
+
     .tech-2 {
       background-image: url(../assets/icons/css3.svg);
     }
+
     .tech-3 {
       background-image: url(../assets/icons/javascript.svg);
     }
+
     .tech-4 {
       background-image: url(../assets/icons/reactjs.svg);
     }
+
     .tech-5 {
       background-image: url(../assets/icons/sass.svg);
     }
+
     .tech-6 {
       background-image: url(../assets/icons/git.svg);
     }
+
     .tech-7 {
       background-image: url(../assets/icons/github_skll.svg);
     }
+
     .tech-8 {
       background-image: url(../assets/icons/wordpress.svg);
     }
+
     .soft-1 {
       background-image: url(../assets/icons/time-management.svg);
     }
+
     .soft-2 {
       background-image: url(../assets/icons/self-management.svg);
     }
+
     .soft-3 {
       background-image: url(../assets/icons/communication.svg);
     }
+
     .soft-4 {
       background-image: url(../assets/icons/team-work.svg);
     }
@@ -254,16 +292,19 @@ main {
     @include padding-section;
 
     .institutes-container {
-      text-align: justify;
-      & > * {
+
+      &>* {
         @include padding-elements-section;
       }
+
       .education-img {
         @include img-settings(100%, 25vw);
       }
+
       .platzi-logo {
         background-image: url(../assets/img/platzi.png);
       }
+
       .tamwood-logo {
         background-image: url(../assets/img/tamwood.png);
       }
@@ -274,7 +315,7 @@ main {
     @include padding-section;
 
     form {
-      & > * {
+      &>* {
         width: 100%;
         padding: 12px 8px;
         margin-bottom: 6px;
@@ -282,9 +323,11 @@ main {
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 1.6rem;
       }
+
       textarea {
         height: 100px;
       }
+
       [type="submit"] {
         height: 48px;
         background-color: $headingColor-3;
@@ -298,11 +341,11 @@ main {
 footer {
   background-color: $headingColor-2;
   @include padding-section;
-  
+
   article {
     padding-bottom: 24px;
 
-    & > * {
+    &>* {
       padding-bottom: 12px;
     }
 
@@ -327,19 +370,21 @@ footer {
       .icon-github {
         background-image: url('../assets/icons/github.svg');
       }
+
       .icon-linkedin {
         background-image: url('../assets/icons/linkedin.svg');
       }
+
       .icon-gmail {
         background-image: url('../assets/icons/gmail.svg');
       }
+
       .icon-twitter {
         background-image: url('../assets/icons/twitter.svg');
       }
     }
 
     p {
-      text-align: center;
       font-size: 1.4rem;
       font-weight: 400;
       color: $backgroundColor;
